@@ -50,6 +50,7 @@ cp wg0-server.conf /etc/wireguard/wg0.conf
 chown -R root:root /etc/wireguard/
 chmod -R og-rwx /etc/wireguard/*
 systemctl enable wg-quick@wg0
+wg-quick up wg0
 echo ""
 echo "Copy this into your client wg0.conf config"
 echo ""
