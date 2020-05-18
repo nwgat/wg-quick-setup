@@ -1,3 +1,8 @@
+| Distro      | Work? |
+| ----------- | ----------- |
+| Ubuntu 16.04 LTS     | OK       |
+| Ubuntu 20.04 LTS     | OK       |
+
 # wg-quick-setup
 quick &amp; easy configuration script for wireguard server
 
