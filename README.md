@@ -6,7 +6,7 @@
 # wg-quick-setup
 quick &amp; easy configuration script for wireguard server
 
-**Endpoint (this has to be internet reachable**
+**Endpoint (this has to be internet reachable)**
 
 the ip or domain of the server
 
