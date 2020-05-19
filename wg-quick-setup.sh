@@ -1,5 +1,5 @@
 domain=`hostname -I | awk '{ print $1 }'`
-deth=`ip r | grep "$domain" | awk '{ print $3 }'`
+deth=`ip r | grep "$domain" | head -1 | awk '{ print $5 }'`
 
 echo ""
 echo "nwgat.ninja wiregard quick setup"
