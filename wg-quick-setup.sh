@@ -1,10 +1,10 @@
 echo ""
 echo "nwgat.ninja wiregard quick setup"
 echo ""
-echo "Endpoint (this has to be internet reachable)"
+echo "Endpoint (this has to be internet reachable, the script opens firewall port 5555)"
 read domain
 
-echo "Ethernet device to forward to"
+echo "Internet Forwarding Device"
 read deth
 
 # install
