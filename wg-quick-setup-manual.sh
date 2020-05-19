@@ -1,12 +1,11 @@
-
+echo ""
 echo "nwgat.ninja wiregard quick setup"
 echo ""
-echo ""enter ip or domain of server"
+echo "Endpoint (this has to be internet reachable, the script opens firewall port 5555)"
 read domain
-echo "ethernet device with internet connection (eth0/ens3 etc)"
+
+echo "Internet Forwarding Device"
 read deth
-echo ""
-echo $deth $domain
 
 # install
 echo ""
@@ -14,7 +13,7 @@ echo "Installing Packages"
 echo ""
 sudo add-apt-repository ppa:wireguard/wireguard -y
 sudo apt-get update -y
-sudo apt-get install wireguard-dkms wireguard-tools ufw wget -y
+sudo apt-get install wireguard-dkms wireguard-tools ufw -y
 
 # firewall
 echo "Open Firewall"
@@ -44,8 +43,6 @@ sed -i "s|server-public-key|$var2|g" wg0-client.conf
 echo "Setting up internet routing"
 echo ""
 sed -i "s|#net.ipv4.ip_forward=1|net.ipv4.ip_forward=1|g" -i /etc/sysctl.conf
-sysctl -w net.ipv4.ip_forward=1
-sysctl -p
 
 echo "Starting wireguard service"
 echo ""
