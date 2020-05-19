@@ -4,7 +4,7 @@ echo ""
 echo "Endpoint (this has to be internet reachable, the script opens firewall port 5555)"
 read domain
 
-echo "Internet Forwarding Ethernet Adapter"
+echo "Internet Forwarding Device"
 read deth
 
 # install
