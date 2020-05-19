@@ -1,10 +1,10 @@
 domain=`hostname -I | awk '{ print $1 }'`
-dev=`ip r | grep "$domain" | awk '{ print $3 }'`
+deth=`ip r | grep "$domain" | awk '{ print $3 }'`
 
 echo ""
 echo "nwgat.ninja wiregard quick setup"
 echo ""
-echo $dev $domain
+echo $deth $domain
 
 # install
 echo ""
