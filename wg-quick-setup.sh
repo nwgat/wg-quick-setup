@@ -1,10 +1,10 @@
-domain=`wget -4 -qO- ifconfig.co`
+domain=`hostname -I | awk '{ print $1 }'`
+dev=`ip r | grep "$domain" | awk '{ print $3 }'`
 
 echo ""
 echo "nwgat.ninja wiregard quick setup"
 echo ""
-echo "Internet Forwarding Device"
-read deth
+echo $dev $domain
 
 # install
 echo ""
