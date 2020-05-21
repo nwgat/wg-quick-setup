@@ -25,6 +25,8 @@ echo ""
 wg genkey | tee server_private_key | wg pubkey > server_public_key
 wg genkey | tee client_private_key | wg pubkey > client_public_key
 
+cp wg0-client.conf wg0-client.conf.bak
+cp wg0-server.conf wg0-server.conf.bak
 sed -i "s|domain|$domain|g" wg0-client.conf
 sed -i "s|deth|$deth|g" wg0-server.conf
 
