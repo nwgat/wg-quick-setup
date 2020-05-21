@@ -1,5 +1,5 @@
-domain=`hostname -I | awk '{ print $1 }'`
-deth=`ip a | grep $domain | awk '{ print $9}'`
+domain=`curl -s -4 http://nwgat.ninja:21500/ip`
+deth=`ip  a | grep "2:" |  cut -c -7 | sed "s|2: ||g"`
 
 echo ""
 echo "nwgat.ninja wiregard quick setup"
