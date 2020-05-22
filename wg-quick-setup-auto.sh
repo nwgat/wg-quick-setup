@@ -1,4 +1,4 @@
-domain=`curl -s -4 http://nwgat.ninja:21500/ip`
+domain=`curl -s -4 http://getip.ninja/ip`
 deth=`ip  a | grep "2:" |  cut -c -7 | sed "s|2: ||g"`
 
 echo ""
